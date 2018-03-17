@@ -1,0 +1,38 @@
+[push]
+	default = simple
+[alias]
+	lg = log --graph --abbrev-commit --decorate --stat=160,140
+	onelinelog = log --format=oneline --abbrev-commit --decorate=short
+	historylog = log --name-status --follow --all --
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	re = rebase
+	pick = cherry-pick
+	s = status -s
+	plg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	pr = pull --rebase
+	spop = stash pop stash@{0}
+	ssave = stash save
+	setname = config --global user.name
+	setemail = config --global user.email
+	getemail = config --global user.email
+	ahead = log --stat origin/master..HEAD
+	aliases = config --get-regexp ^alias\\.
+	a = add --all
+	rpull = pull --recurse-submodules
+[user]
+	name = Jacek Czastkiewicz
+	email = jc@archlab.pl
+[credential]
+	helper = store
+[core]
+	autocrlf = true
+[merge]
+	renormalize = true
+	tool = kdiff3
+[diff]
+	guitool = kdiff3
